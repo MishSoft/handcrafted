@@ -78,7 +78,7 @@ export default function Header() {
       text-2xl font-semibold tracking-tight
       text-white
       bg-clip-text 
-      bg-gradient-to-r from-white via-white/90 to-white/60
+      bg-gradient-to-r from-black via-black/90 to-black/60
       drop-shadow-[0_1px_6px_rgba(255,255,255,0.15)]
       hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.25)]
       transition-all duration-300

@@ -1,8 +1,12 @@
+"use client";
 import React from "react";
+import { useAppContext } from "@/context/Context";
 
 export default function SignInButton() {
+  const { setIsLogin } = useAppContext();
   return (
     <button
+      onClick={() => setIsLogin(true)}
       className="
         relative
         flex items-center justify-center

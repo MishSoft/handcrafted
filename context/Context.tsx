@@ -4,15 +4,20 @@ import { createContext, useContext, useState } from "react";
 interface AppContextType {
   isOpenDropMenu: boolean;
   setIsOpenDropMenu: (e: boolean) => void;
+  isLogin: boolean;
+  setIsLogin: (e: boolean) => void;
 }
 
 const AppContext = createContext<AppContextType | null>(null);
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [isOpenDropMenu, setIsOpenDropMenu] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
 
   return (
-    <AppContext.Provider value={{ isOpenDropMenu, setIsOpenDropMenu }}>
+    <AppContext.Provider
+      value={{ isOpenDropMenu, setIsOpenDropMenu, isLogin, setIsLogin }}
+    >
       {children}
     </AppContext.Provider>
   );

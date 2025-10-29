@@ -1,18 +1,18 @@
-import Image from "next/image";
-import Header from "./components/Header";
+"use client";
 import Hero from "./components/Hero";
 import FeaturedCreations from "./components/FeaturedCreations";
 import ExploreCategories from "./components/ExploreCategories";
-import Footer from "./components/Footer";
+import { useAppContext } from "@/context/Context";
+import SignIn from "./components/SignIn";
 
 export default function Home() {
+  const { isLogin } = useAppContext();
   return (
     <div className="relative">
-      <Header />
       <Hero />
       <FeaturedCreations />
       <ExploreCategories />
-      <Footer />
+      {isLogin && <SignIn />}
     </div>
   );
 }

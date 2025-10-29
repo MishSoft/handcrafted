@@ -11,7 +11,7 @@ import SearchBtn from "./SearchBtn";
 import SingInButton from "./SingInButton";
 
 export default function Header() {
-  const { isOpenDropMenu, setIsOpenDropMenu } = useAppContext();
+  const { isOpenDropMenu, setIsOpenDropMenu, setIsLogin } = useAppContext();
   const navRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
 

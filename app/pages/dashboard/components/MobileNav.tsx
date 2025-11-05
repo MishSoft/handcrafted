@@ -34,7 +34,7 @@ export default function MobileNav() {
     <AnimatePresence>
       {!isOpenDropMenu && (
         <motion.div
-          className="absolute overflow-hidden top-full left-0 w-full min-h-screen bg-gray-100/20 backdrop-blur-2xl md:hidden"
+          className="absolute z-[999999] overflow-hidden top-full left-0 w-full min-h-screen bg-gray-100/20 backdrop-blur-2xl md:hidden"
           initial="hidden"
           animate="visible"
           exit="exit"

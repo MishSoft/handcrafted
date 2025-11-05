@@ -10,7 +10,7 @@ const links = [
   {
     id: 1,
     label: "Profile",
-    path: "/profile",
+    path: "/pages/dashboard/pages/profile",
     icon: <User size={16} />,
   },
   {

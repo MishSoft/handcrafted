@@ -12,7 +12,7 @@ const DashboardContext = createContext<DashboardContextType | null>(null);
 
 // DashboardProvider - ეს უნდა იყოს იმპორტი, რომელიც გამოიყენება layout-ებში
 export function DashboardProvider({ children }: { children: ReactNode }) {
-  const [isOpenDropMenu, setIsOpenDropMenu] = useState(false);
+  const [isOpenDropMenu, setIsOpenDropMenu] = useState(true);
 
   return (
     <DashboardContext.Provider value={{ isOpenDropMenu, setIsOpenDropMenu }}>

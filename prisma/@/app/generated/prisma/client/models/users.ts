@@ -41,6 +41,7 @@ export type UsersMinAggregateOutputType = {
   password: string | null
   phone: string | null
   createdAt: Date | null
+  profileImage: string | null
 }
 
 export type UsersMaxAggregateOutputType = {
@@ -51,6 +52,7 @@ export type UsersMaxAggregateOutputType = {
   password: string | null
   phone: string | null
   createdAt: Date | null
+  profileImage: string | null
 }
 
 export type UsersCountAggregateOutputType = {
@@ -61,6 +63,7 @@ export type UsersCountAggregateOutputType = {
   password: number
   phone: number
   createdAt: number
+  profileImage: number
   _all: number
 }
 
@@ -81,6 +84,7 @@ export type UsersMinAggregateInputType = {
   password?: true
   phone?: true
   createdAt?: true
+  profileImage?: true
 }
 
 export type UsersMaxAggregateInputType = {
@@ -91,6 +95,7 @@ export type UsersMaxAggregateInputType = {
   password?: true
   phone?: true
   createdAt?: true
+  profileImage?: true
 }
 
 export type UsersCountAggregateInputType = {
@@ -101,6 +106,7 @@ export type UsersCountAggregateInputType = {
   password?: true
   phone?: true
   createdAt?: true
+  profileImage?: true
   _all?: true
 }
 
@@ -198,6 +204,7 @@ export type UsersGroupByOutputType = {
   password: string
   phone: string
   createdAt: Date
+  profileImage: string | null
   _count: UsersCountAggregateOutputType | null
   _avg: UsersAvgAggregateOutputType | null
   _sum: UsersSumAggregateOutputType | null
@@ -231,6 +238,7 @@ export type usersWhereInput = {
   password?: Prisma.StringFilter<"users"> | string
   phone?: Prisma.StringFilter<"users"> | string
   createdAt?: Prisma.DateTimeFilter<"users"> | Date | string
+  profileImage?: Prisma.StringNullableFilter<"users"> | string | null
   products?: Prisma.ProductListRelationFilter
 }
 
@@ -242,6 +250,7 @@ export type usersOrderByWithRelationInput = {
   password?: Prisma.SortOrder
   phone?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
+  profileImage?: Prisma.SortOrderInput | Prisma.SortOrder
   products?: Prisma.ProductOrderByRelationAggregateInput
 }
 
@@ -256,6 +265,7 @@ export type usersWhereUniqueInput = Prisma.AtLeast<{
   password?: Prisma.StringFilter<"users"> | string
   phone?: Prisma.StringFilter<"users"> | string
   createdAt?: Prisma.DateTimeFilter<"users"> | Date | string
+  profileImage?: Prisma.StringNullableFilter<"users"> | string | null
   products?: Prisma.ProductListRelationFilter
 }, "id" | "email">
 
@@ -267,6 +277,7 @@ export type usersOrderByWithAggregationInput = {
   password?: Prisma.SortOrder
   phone?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
+  profileImage?: Prisma.SortOrderInput | Prisma.SortOrder
   _count?: Prisma.usersCountOrderByAggregateInput
   _avg?: Prisma.usersAvgOrderByAggregateInput
   _max?: Prisma.usersMaxOrderByAggregateInput
@@ -285,6 +296,7 @@ export type usersScalarWhereWithAggregatesInput = {
   password?: Prisma.StringWithAggregatesFilter<"users"> | string
   phone?: Prisma.StringWithAggregatesFilter<"users"> | string
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"users"> | Date | string
+  profileImage?: Prisma.StringNullableWithAggregatesFilter<"users"> | string | null
 }
 
 export type usersCreateInput = {
@@ -294,6 +306,7 @@ export type usersCreateInput = {
   password: string
   phone: string
   createdAt?: Date | string
+  profileImage?: string | null
   products?: Prisma.ProductCreateNestedManyWithoutUserInput
 }
 
@@ -305,6 +318,7 @@ export type usersUncheckedCreateInput = {
   password: string
   phone: string
   createdAt?: Date | string
+  profileImage?: string | null
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutUserInput
 }
 
@@ -315,6 +329,7 @@ export type usersUpdateInput = {
   password?: Prisma.StringFieldUpdateOperationsInput | string
   phone?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  profileImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   products?: Prisma.ProductUpdateManyWithoutUserNestedInput
 }
 
@@ -326,6 +341,7 @@ export type usersUncheckedUpdateInput = {
   password?: Prisma.StringFieldUpdateOperationsInput | string
   phone?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  profileImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   products?: Prisma.ProductUncheckedUpdateManyWithoutUserNestedInput
 }
 
@@ -337,6 +353,7 @@ export type usersCreateManyInput = {
   password: string
   phone: string
   createdAt?: Date | string
+  profileImage?: string | null
 }
 
 export type usersUpdateManyMutationInput = {
@@ -346,6 +363,7 @@ export type usersUpdateManyMutationInput = {
   password?: Prisma.StringFieldUpdateOperationsInput | string
   phone?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  profileImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type usersUncheckedUpdateManyInput = {
@@ -356,6 +374,7 @@ export type usersUncheckedUpdateManyInput = {
   password?: Prisma.StringFieldUpdateOperationsInput | string
   phone?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  profileImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type usersCountOrderByAggregateInput = {
@@ -366,6 +385,7 @@ export type usersCountOrderByAggregateInput = {
   password?: Prisma.SortOrder
   phone?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
+  profileImage?: Prisma.SortOrder
 }
 
 export type usersAvgOrderByAggregateInput = {
@@ -380,6 +400,7 @@ export type usersMaxOrderByAggregateInput = {
   password?: Prisma.SortOrder
   phone?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
+  profileImage?: Prisma.SortOrder
 }
 
 export type usersMinOrderByAggregateInput = {
@@ -390,6 +411,7 @@ export type usersMinOrderByAggregateInput = {
   password?: Prisma.SortOrder
   phone?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
+  profileImage?: Prisma.SortOrder
 }
 
 export type usersSumOrderByAggregateInput = {
@@ -407,6 +429,10 @@ export type StringFieldUpdateOperationsInput = {
 
 export type DateTimeFieldUpdateOperationsInput = {
   set?: Date | string
+}
+
+export type NullableStringFieldUpdateOperationsInput = {
+  set?: string | null
 }
 
 export type IntFieldUpdateOperationsInput = {
@@ -438,6 +464,7 @@ export type usersCreateWithoutProductsInput = {
   password: string
   phone: string
   createdAt?: Date | string
+  profileImage?: string | null
 }
 
 export type usersUncheckedCreateWithoutProductsInput = {
@@ -448,6 +475,7 @@ export type usersUncheckedCreateWithoutProductsInput = {
   password: string
   phone: string
   createdAt?: Date | string
+  profileImage?: string | null
 }
 
 export type usersCreateOrConnectWithoutProductsInput = {
@@ -473,6 +501,7 @@ export type usersUpdateWithoutProductsInput = {
   password?: Prisma.StringFieldUpdateOperationsInput | string
   phone?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  profileImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type usersUncheckedUpdateWithoutProductsInput = {
@@ -483,6 +512,7 @@ export type usersUncheckedUpdateWithoutProductsInput = {
   password?: Prisma.StringFieldUpdateOperationsInput | string
   phone?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  profileImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 
@@ -524,6 +554,7 @@ export type usersSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = 
   password?: boolean
   phone?: boolean
   createdAt?: boolean
+  profileImage?: boolean
   products?: boolean | Prisma.users$productsArgs<ExtArgs>
   _count?: boolean | Prisma.UsersCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["users"]>
@@ -536,6 +567,7 @@ export type usersSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensi
   password?: boolean
   phone?: boolean
   createdAt?: boolean
+  profileImage?: boolean
 }, ExtArgs["result"]["users"]>
 
 export type usersSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -546,6 +578,7 @@ export type usersSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensi
   password?: boolean
   phone?: boolean
   createdAt?: boolean
+  profileImage?: boolean
 }, ExtArgs["result"]["users"]>
 
 export type usersSelectScalar = {
@@ -556,9 +589,10 @@ export type usersSelectScalar = {
   password?: boolean
   phone?: boolean
   createdAt?: boolean
+  profileImage?: boolean
 }
 
-export type usersOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "lastname" | "email" | "password" | "phone" | "createdAt", ExtArgs["result"]["users"]>
+export type usersOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "lastname" | "email" | "password" | "phone" | "createdAt" | "profileImage", ExtArgs["result"]["users"]>
 export type usersInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   products?: boolean | Prisma.users$productsArgs<ExtArgs>
   _count?: boolean | Prisma.UsersCountOutputTypeDefaultArgs<ExtArgs>
@@ -579,6 +613,7 @@ export type $usersPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
     password: string
     phone: string
     createdAt: Date
+    profileImage: string | null
   }, ExtArgs["result"]["users"]>
   composites: {}
 }
@@ -1010,6 +1045,7 @@ export interface usersFieldRefs {
   readonly password: Prisma.FieldRef<"users", 'String'>
   readonly phone: Prisma.FieldRef<"users", 'String'>
   readonly createdAt: Prisma.FieldRef<"users", 'DateTime'>
+  readonly profileImage: Prisma.FieldRef<"users", 'String'>
 }
     
 
